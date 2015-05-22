@@ -1,6 +1,6 @@
 {
   "name": "expiry-js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A lightweight Javascript Universal Module for parsing durations",
   "main": "dist/expiry.js",
   "directories": {
@@ -20,14 +20,6 @@
   },
   "author": "Adriano Di Giovanni <me@adrianodigiovanni.com> (http://adrianodigiovanni.com/)",
   "license": "MIT",
-  "dependencies": {
-    "chai": "^2.3.0",
-    "grunt": "^0.4.5",
-    "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-concat": "^0.5.1",
-    "grunt-contrib-uglify": "^0.9.1",
-    "matchdep": "^0.3.0"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/adriano-di-giovanni/expiry-js.git"
