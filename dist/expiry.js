@@ -169,6 +169,8 @@
     return Expiry.forge.apply(Expiry, arguments);
   }
 
+  expiry.Expiry = Expiry;
+
   expiry.VERSION = '0.1.0';
 
   return expiry;
