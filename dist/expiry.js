@@ -171,7 +171,7 @@
 
   expiry.Expiry = Expiry;
 
-  expiry.VERSION = '0.1.0';
+  expiry.VERSION = '0.1.4';
 
   return expiry;
 }));
