@@ -61,8 +61,6 @@
           this.months = months || 0;
         },
 
-        re = /([\d\.]+)\s*([a-zA-Z]+)/g,
-
         round = Math.round;
 
 
@@ -97,6 +95,7 @@
         }
 
         var
+          re = /([\d\.]+)\s*([a-zA-Z]+)/g,
           result,
 
           maybeValue,
