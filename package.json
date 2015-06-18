@@ -1,6 +1,6 @@
 {
   "name": "expiry-js",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A lightweight Javascript Universal Module for parsing durations",
   "main": "dist/expiry.js",
   "directories": {

@@ -62,42 +62,42 @@ describe('Expiry', function () {
       it('millisecond', function () {
 
         var
-          o = { millisecond: 1 };
+          o = { millisecond: 2 };
 
-        f('1ms', o);
-        f('1 ms', o);
+        f('2ms', o);
+        f('2 ms', o);
       });
 
       it('second', function () {
 
         var
-          o = { second: 1 };
+          o = { second: 2 };
 
-        f('1s', o);
+        f('2s', o);
       });
 
       it('minute', function () {
 
         var
-          o = { minute: 1 };
+          o = { minute: 2 };
 
-        f('1m', o);
+        f('2m', o);
       });
 
       it('hour', function () {
 
         var
-          o = { hour: 1 };
+          o = { hour: 2 };
 
-        f('1h', o);
+        f('2h', o);
       });
 
       it('day', function () {
 
         var
-          o = { day: 1 };
+          o = { day: 2 };
 
-        f('1D', o);
+        f('2D', o);
       });
 
       it('week', function () {
@@ -111,17 +111,17 @@ describe('Expiry', function () {
       it('month', function () {
 
         var
-          o = { month: 1 };
+          o = { month: 2 };
 
-        f('1M', o);
+        f('2M', o);
       });
 
       it('year', function () {
 
         var
-          o = { year: 1 };
+          o = { year: 2 };
 
-        f('1Y', o);
+        f('2Y', o);
       });
 
       it('all', function () {

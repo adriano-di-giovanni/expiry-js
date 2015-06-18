@@ -36,3 +36,9 @@ console.log(day.valueOf()); // 86400000
 console.log(day.asMilliseconds()); // 86400000
 console.log(day.asSeconds()); // 86400
 ```
+
+## Change Log
+
+### 0.1.6 (2015-06-18)
+
+* Fixes error parsing seconds. Thanks, [@BigFunger](https://github.com/BigFunger)

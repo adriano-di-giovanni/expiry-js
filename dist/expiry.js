@@ -129,7 +129,7 @@
             case 'minute':
             case 'second':
             case 'millisecond':
-              milliseconds += unitToMilliseconds[unit];
+              milliseconds += maybeValue * unitToMilliseconds[unit];
               break;
             default:
               throw new Error('Unexpected unit '+maybeUnit);
@@ -170,7 +170,7 @@
 
   expiry.Expiry = Expiry;
 
-  expiry.VERSION = '0.1.4';
+  expiry.VERSION = '0.1.6';
 
   return expiry;
 }));
