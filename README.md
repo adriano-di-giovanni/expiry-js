@@ -30,7 +30,9 @@ var
     hour = expiry('1h'), // or '1 hour', '1 hours'
     minute = expiry('1m'), // or '1 minute', '1 minutes'
     second = expiry('1s'), // or '1 second', '1 seconds'
-    milliseconds = expiry('1ms'); // or '1 millisecond', '1 milliseconds'
+    milliseconds = expiry('1ms'), // or '1 millisecond', '1 milliseconds'
+
+    altMilliseconds = expiry('1', 'ms');
 
 console.log(day.valueOf()); // 86400000
 console.log(day.asMilliseconds()); // 86400000
@@ -38,6 +40,10 @@ console.log(day.asSeconds()); // 86400
 ```
 
 ## Change Log
+
+### 0.1.7 (2015-06-20)
+
+* Adds parsing of digits only strings. Thanks, [@BigFunger](https://github.com/BigFunger)
 
 ### 0.1.6 (2015-06-18)
 

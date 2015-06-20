@@ -37,10 +37,15 @@ var
     return end - start;
   },
 
-  f = function forge(s, o) {
+  f = function forge(s, u, o) {
+
+    if ( ! o) {
+      o = u;
+      u = void 0;
+    }
 
     var
-      millisecond = expiry(s).valueOf();
+      millisecond = expiry(s, u).valueOf();
 
     expect(millisecond).to.equal(d(o));
   };
@@ -55,9 +60,17 @@ describe('Expiry', function () {
 
     it('w/ number argument', function () {
       expect(expiry(1).valueOf()).to.equal(1);
+      expect(expiry(2, 'ms').valueOf()).to.equal(2);
+      expect(expiry(2, 's').valueOf()).to.equal(2 * 1000);
+      expect(expiry(2, 'm').valueOf()).to.equal(2 * 1000 * 60);
+      expect(expiry(2, 'h').valueOf()).to.equal(2 * 1000 * 60 * 60);
+      expect(expiry(2, 'D').valueOf()).to.equal(d({ day: 2}));
+      expect(expiry(2, 'M').valueOf()).to.equal(d({ month: 2}));
+      expect(expiry(2, 'Y').valueOf()).to.equal(d({ year: 2}));
     });
 
     describe('w/ string argument', function () {
+
 
       it('millisecond', function () {
 
@@ -66,6 +79,7 @@ describe('Expiry', function () {
 
         f('2ms', o);
         f('2 ms', o);
+        f('2', 'ms', o);
       });
 
       it('second', function () {
@@ -74,6 +88,7 @@ describe('Expiry', function () {
           o = { second: 2 };
 
         f('2s', o);
+        f('2', 's', o);
       });
 
       it('minute', function () {
@@ -82,6 +97,7 @@ describe('Expiry', function () {
           o = { minute: 2 };
 
         f('2m', o);
+        f('2', 'm', o);
       });
 
       it('hour', function () {
@@ -90,6 +106,7 @@ describe('Expiry', function () {
           o = { hour: 2 };
 
         f('2h', o);
+        f('2', 'h', o);
       });
 
       it('day', function () {
@@ -98,6 +115,7 @@ describe('Expiry', function () {
           o = { day: 2 };
 
         f('2D', o);
+        f('2', 'D', o);
       });
 
       it('week', function () {
@@ -106,6 +124,7 @@ describe('Expiry', function () {
           o = { day: 7 };
 
         f('1W', o);
+        f('1', 'W', o);
       });
 
       it('month', function () {
@@ -114,6 +133,7 @@ describe('Expiry', function () {
           o = { month: 2 };
 
         f('2M', o);
+        f('2', 'M', o);
       });
 
       it('year', function () {
@@ -122,6 +142,7 @@ describe('Expiry', function () {
           o = { year: 2 };
 
         f('2Y', o);
+        f('2', 'Y', o);
       });
 
       it('all', function () {
