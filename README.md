@@ -2,7 +2,7 @@
 
 A lightweight Javascript Universal Module for parsing durations.
 
-I developed it as a utility for managing Redis expiries.
+I developed it as a utility for managing Redis expiries in [node-redis-keychain](https://github.com/adriano-di-giovanni/node-redis-keychain)
 
 ## Installation
 
