@@ -2,6 +2,10 @@
 
 A lightweight Javascript Universal Module for parsing durations.
 
+It handles milliseconds, seconds, minutes and hours.
+
+It also precisely handles days, weeks, months and years: expiry-js computes number of milliseconds of a long duration taking into account the precise moment you invoke `#valueOf()`.
+
 I developed it as a utility for managing Redis expiries in [node-redis-keychain](https://github.com/adriano-di-giovanni/node-redis-keychain)
 
 ## Installation
